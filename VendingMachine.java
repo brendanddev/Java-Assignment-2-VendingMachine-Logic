@@ -9,7 +9,7 @@ package assignmentTwo_000879513;
  * requested. The Vending Machine also has an option to summarize how much of the product is left, how much credit
  * remains, and how much money the Vending Machine has taken in overall.
  *
- * @author Brendan Dileo 000879513
+ * @author Brendan Dileo
  */
 
 public class VendingMachine {
