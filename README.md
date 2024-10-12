@@ -1,11 +1,64 @@
-# Java-Assignment-2-VendingMachine-Logic
+# Vending Machine Simulation in Java
 
-In this assignment, I have developed a simple simulation of a break room with two vending machines using Java. My main focus is on understanding and implementing the concepts of objects, instance variables, methods, and encapsulation. The task involves creating two classes: one for the vending machine and another for the break room interaction.
+This repository contains a Java-based simulation of a break room containing two vending machines. The goal is to simulate user interaction with these vending machines, which each hold a specific type of product. The simulation focuses on object-oriented principles, such as encapsulation, instance variables, and methods, while adhering to the separation of the model and view.
 
-I have implemented the vending machine class in Java. This class will serve as the model, keeping track of the vending machine’s state without directly interacting with the user. The vending machine will accept specific coins (loonies, toonies, quarters, nickels, and dimes), vend products if enough credit is available, and handle coin returns.
+## Overview
 
-I have then created a break room class with a main method to simulate user interactions. This will act as the view, providing a text-based interface for the user to interact with the vending machines. Users can insert money, vend products, get change back, and view the status of the vending machines.
+The project is divided into two main parts:
 
-The assignment emphasizes the separation of concerns between the model and the view. The vending machine class will only handle the internal logic and state management, while the break room class will handle all user interactions and display the results. Another focus of this assignment was beggining to understand the concept of Encapsulation in Java.
+1. **Vending Machine Model**: The vending machine is responsible for tracking the product's name, price, quantity, current user credit, and the total money accumulated since activation. It interacts only through method calls and does not directly handle user input or output.
+  
+2. **Break Room Simulation (View)**: This is a text-based interface that allows a user to interact with two vending machines through a menu system. It processes user input, calls the vending machine methods, and displays the outcomes.
 
-This assignment was created for the Programming In Java course at Mohawk College, I achieved an 100% on this assignment.
+## Features
+
+### Vending Machine (Model)
+- **Product Tracking**: Each machine holds one type of product, with its name, price, and quantity tracked.
+- **Coin Input**: The machine accepts loonies, toonies, quarters, dimes, and nickels. Coins are inserted one at a time, and no bills or pennies are accepted.
+- **Vending**: Users can attempt to vend products from the machine, which succeeds if there is enough credit and sufficient stock. 
+- **Credit Management**: Users can add credit to the machine, which keeps track of current unused credit and total earnings.
+- **Coin Return**: There is a coin return option that gives back any unused credit to the user.
+- **Encapsulation**: All instance variables are encapsulated with appropriate getter and setter methods.
+- **ToString Method**: Provides a summary of the vending machine status, including the product name, quantity, price, current credit, and total earnings.
+
+### Break Room Simulation (View)
+- **Menu Interface**: A simple text-based menu allows the user to:
+  - Enter coins into either vending machine
+  - Vend a product from either machine
+  - Get change back from the machine
+  - Exit the break room
+- **Interaction**: The view communicates with the vending machines solely through method calls and displays the results based on the machine's responses.
+
+## Usage
+
+1. Clone the repository and navigate to the project directory.
+2. Compile the Java files.
+3. Run the main class to simulate the break room interaction with two vending machines.
+
+## Classes
+
+- **VendingMachine**: Represents the vending machine model.
+  - `setProductName(String name)`: Sets the product name.
+  - `setPrice(double price)`: Sets the price of the product.
+  - `setQuantity(int quantity)`: Sets the available quantity of the product.
+  - `insertCoin(double amount)`: Inserts a coin into the machine and increases the user's credit.
+  - `vend()`: Attempts to vend a product if enough credit is available.
+  - `returnCredit()`: Returns any unused credit to the user.
+  - `toString()`: Returns a summary of the machine's status.
+  
+- **BreakRoom**: The view that provides a text-based interface for interacting with the vending machines.
+  - `main()`: Simulates the break room where users can interact with the vending machines.
+
+## Requirements
+
+- Java 8 or higher
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+2. Compile the Java files:
+  javac *.java
+3. Run the application:
+  java BreakRoom
