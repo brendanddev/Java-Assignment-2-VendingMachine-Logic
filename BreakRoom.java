@@ -8,7 +8,7 @@ package assignmentTwo_000879513;
  * vend an item from the Vending Machine, and they can get there money back as change, or just return their money if
  * they decide they do not want anything anymore.
  *
- * @author Brendan Dileo 000879513
+ * @author Brendan Dileo
  */
 
 import java.util.Scanner;
